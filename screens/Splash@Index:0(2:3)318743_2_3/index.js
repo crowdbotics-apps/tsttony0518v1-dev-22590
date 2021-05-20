@@ -45,16 +45,15 @@ export class Blank extends React.Component {
           </Text>
         </View>
         <TouchableOpacity
+          style={styles.View_2_8}
           onPress={() =>
             this.props.navigation.navigate(getNavigationScreen("2_13"))
           }
         >
-          <View style={styles.View_2_8}>
             <View style={styles.View_2_9} />
             <View style={styles.View_2_10}>
               <Text style={styles.Text_2_10}>START SHOPPING</Text>
             </View>
-          </View>
         </TouchableOpacity>
       </View>
     </ScrollView>

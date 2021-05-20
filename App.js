@@ -20,7 +20,12 @@ const getNavigation = (modules, screens, initialRoute) => {
     });
     return (
       <NavigationContainer>
-        <Stack.Navigator initialRouteName={initialRoute}>
+        <Stack.Navigator 
+          initialRouteName={initialRoute} 
+          screenOptions={{
+            headerShown: false
+          }}
+        >
           {routes}
         </Stack.Navigator>
       </NavigationContainer>
