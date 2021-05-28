@@ -192,7 +192,7 @@ jobs:
 
       - run:
           name: Update CocaPods dependencies
-          command: pod install --verbose
+          command: bundle exec pod install --verbose
           working_directory: ios
           timeout: 1200
 
