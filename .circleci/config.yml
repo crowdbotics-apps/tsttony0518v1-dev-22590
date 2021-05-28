@@ -191,6 +191,11 @@ jobs:
             - ios/Pods
 
       - run:
+          name: Install MacOS ffi
+          command: gem inst ffi -- --disable-system-libffi
+          working_directory: ios
+
+      - run:
           name: Update CocaPods dependencies
           command: bundle exec pod install --verbose
           working_directory: ios
@@ -255,9 +260,9 @@ workflows:
   node-android-ios:
     jobs:
       - node
-      - android:
-          requires:
-            - node
+      # - android:
+      #     requires:
+      #       - node
       - ios:
           requires:
             - node
